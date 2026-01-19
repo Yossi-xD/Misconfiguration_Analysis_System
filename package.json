@@ -1,0 +1,12 @@
+{
+  "name": "s3-security-scanner",
+  "version": "1.0.0",
+  "description": "S3 Security Scanner",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "node src/main.js",
+    "scan": "node src/main.js"
+  },
+  "dependencies": {},
+  "type": "commonjs"
+}

@@ -1,0 +1,21 @@
+{
+  "Name": "my-private-bucket",
+  "ACL": {
+    "Grants": [
+      {
+        "Grantee": {
+          "Type": "CanonicalUser",
+          "ID": "123456789012"
+        },
+        "Permission": "FULL_CONTROL"
+      }
+    ]
+  },
+  "Encryption": null,
+  "PublicAccessBlockConfiguration": {
+    "BlockPublicAcls": true,
+    "IgnorePublicAcls": true,
+    "BlockPublicPolicy": true,
+    "RestrictPublicBuckets": true
+  }
+}
