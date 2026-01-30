@@ -65,9 +65,13 @@ Misconfiguration_Analysis_System/
 ## 🎯 Features
 ### Backend Scanner
 ✅ Modular Rule Engine - Easy to add new security rules
+
 ✅ Risk Scoring - Calculates severity (LOW, MEDIUM, HIGH, CRITICAL)
+
 ✅ Alert Generation - Structured JSON alerts with findings
+
 ✅ Sample Data - Includes test configurations
+
 ✅ Extensible - Add custom rules for specific compliance needs
 
 ### Frontend Dashboard
