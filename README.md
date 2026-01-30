@@ -88,35 +88,43 @@ Misconfiguration_Analysis_System/
 ✅ Mock Data - Demo mode for testing
 
 ## 📊 Sample Output
-Terminal Output
+###Terminal Output
 
 [*] Starting S3 security scan pipeline...
+
 [+] Scanned 3 bucket(s)
+
 [+] Found 7 issue(s) in my-public-bucket
-[+] Risk score: 100 (CRITICAL)
+
+[+]Risk score: 100 (CRITICAL)
+
 [✓] Saved 3 alerts to: alerts_output.json
 
 ## 📊 ALERT SUMMARY
 ================
+
 Total alerts: 3
+
 By severity: CRITICAL: 1, HIGH: 1, LOW: 1
+
 By bucket: my-public-bucket: 1, my-private-bucket: 1, s3-private-encrypted: 1
 
-### Dashboard Preview
 
+### Dashboard Preview
+```
 ┌─────────────────────────────────────────────────────┐
 │                S3 SECURITY DASHBOARD                │
 ├─────────────────────────────────────────────────────┤
-│  🔴 CRITICAL: 1    🟡 HIGH: 1    🟢 LOW: 1          │
+│  🔴 CRITICAL: 1    🟡 HIGH: 1    🟢 LOW: 1        │
 │                                                     │
-│  ┌──────────────────────────────────────────────┐  │
-│  │ Bucket            Severity  Score  Findings  │  │
+│  ┌──────────────────────────────────────────────┐   │
+│  │ Bucket            Severity  Score  Findings  │   │
 │  │ my-public-bucket  🔴 CRITICAL  100   7       │  │
 │  │ my-private-bucket 🟡 HIGH       80   1       │  │
 │  │ s3-encrypted      🟢 LOW        20   1       │  │
-│  └──────────────────────────────────────────────┘  │
+│  └──────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────┘
-
+```
 ## 📁 Project Structure Details
 ### Core Modules
 src/scanner/s3Scanner.js - Reads JSON configurations from samples folder
@@ -156,14 +164,21 @@ s3_private_encrypted.json - Well-secured private bucket (LOW risk)
 
 s3_private_unencrypted.json - Private but unencrypted bucket (HIGH risk)
 
-## 🚨 Security Rules Implemented
+## 🚨 Security Rules Implemented ##
 Rule	Severity	Description
+
 PUBLIC_ACL_ACCESS	HIGH	Bucket has public ACL grants
+
 PUBLIC_POLICY_ACCESS	CRITICAL	Bucket policy allows public access
+
 NO_ENCRYPTION	HIGH	No server-side encryption configured
+
 PUBLIC_ACCESS_BLOCK_DISABLED	HIGH	Block public access settings are disabled
+
 WILDCARD_ACTION	CRITICAL	IAM policy uses wildcard actions (*)
+
 WILDCARD_RESOURCE	HIGH	IAM policy uses wildcard resources (*)
+
 
 ## 📈 Scoring System
 CRITICAL (90-100): Multiple high-risk issues or public exposure
