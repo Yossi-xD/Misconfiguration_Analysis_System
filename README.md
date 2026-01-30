@@ -76,10 +76,15 @@ Misconfiguration_Analysis_System/
 
 ### Frontend Dashboard
 ✅ Real-time Stats - Visual severity breakdown
+
 ✅ Interactive Table - Click to view detailed findings
+
 ✅ Export Functionality - Download results as CSV
+
 ✅ Responsive Design - Works on desktop & mobile
+
 ✅ Local Storage - Saves results between sessions
+
 ✅ Mock Data - Demo mode for testing
 
 ## 📊 Sample Output
