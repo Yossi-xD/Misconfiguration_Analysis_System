@@ -45,22 +45,22 @@ Risk Scoring - Calculates severity scores (LOW → CRITICAL)
 
 ## 🏗️ Architecture
 
-📁 Misconfiguration_Analysis_System/
-├── 📁 src/ # Core scanner engine
-│ ├── scanner/s3Scanner.js # Data collection from samples
-│ ├── normalizer/normalizeS3.js # Data normalization
-│ ├── analysis/rules/ # Security rule engine (4+ rules)
-│ ├── scoring/score.js # Risk scoring system
-│ ├── alerts/ # Alert creation & storage
-│ └── main.js # Pipeline coordinator
-├── 📁 frontend/ # Web dashboard
-│ ├── index.html # Dashboard UI
-│ ├── style.css # Styling
-│ └── app.js # Frontend logic
-├── 📁 samples/ # Sample S3 configurations
-├── server.js # Express web server
-├── package.json # Dependencies
-└── README.md # This file
+Misconfiguration_Analysis_System/
+├── src/                           # Core scanner engine
+│   ├── scanner/s3Scanner.js       # Data collection from samples
+│   ├── normalizer/normalizeS3.js  # Data normalization
+│   ├── analysis/rules/            # Security rule engine (4+ rules)
+│   ├── scoring/score.js           # Risk scoring system
+│   ├── alerts/                    # Alert creation & storage
+│   └── main.js                    # Pipeline coordinator
+├── frontend/                      # Web dashboard
+│   ├── index.html                 # Dashboard UI
+│   ├── style.css                  # Styling
+│   └── app.js                     # Frontend logic
+├── samples/                       # Sample S3 configurations
+├── server.js                      # Express web server
+├── package.json                   # Dependencies
+└── README.md                      # This file
 
 ## 🎯 Features
 ### Backend Scanner
