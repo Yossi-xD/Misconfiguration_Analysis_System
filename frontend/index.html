@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S3 Security Scanner Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-shield-alt"></i> S3 Security Scanner</h1>
+            <p class="subtitle">AWS S3 Misconfiguration Analysis & Risk Dashboard</p>
+        </header>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="scanBtn" class="btn btn-primary">
+                <i class="fas fa-search"></i> Run Security Scan
+            </button>
+            <button id="loadBtn" class="btn btn-secondary">
+                <i class="fas fa-folder-open"></i> Load Previous Results
+            </button>
+            <button id="exportBtn" class="btn btn-success">
+                <i class="fas fa-download"></i> Export as CSV
+            </button>
+        </div>
+
+        <!-- Stats Overview -->
+        <div class="stats-container">
+            <div class="stat-card critical">
+                <h3><i class="fas fa-exclamation-triangle"></i> CRITICAL</h3>
+                <p id="criticalCount">0</p>
+                <small>Issues</small>
+            </div>
+            <div class="stat-card high">
+                <h3><i class="fas fa-exclamation-circle"></i> HIGH</h3>
+                <p id="highCount">0</p>
+                <small>Issues</small>
+            </div>
+            <div class="stat-card medium">
+                <h3><i class="fas fa-info-circle"></i> MEDIUM</h3>
+                <p id="mediumCount">0</p>
+                <small>Issues</small>
+            </div>
+            <div class="stat-card low">
+                <h3><i class="fas fa-check-circle"></i> LOW</h3>
+                <p id="lowCount">0</p>
+                <small>Issues</small>
+            </div>
+            <div class="stat-card total">
+                <h3><i class="fas fa-chart-bar"></i> TOTAL</h3>
+                <p id="totalBuckets">0</p>
+                <small>Buckets Scanned</small>
+            </div>
+        </div>
+
+        <!-- Alerts Table -->
+        <div class="alerts-section">
+            <h2><i class="fas fa-bell"></i> Security Alerts</h2>
+            <div class="table-container">
+                <table id="alertsTable">
+                    <thead>
+                        <tr>
+                            <th>Bucket</th>
+                            <th>Severity</th>
+                            <th>Score</th>
+                            <th>Findings</th>
+                            <th>Time</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alertsBody">
+                        <!-- Will be populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Findings Details -->
+        <div class="details-section">
+            <h2><i class="fas fa-search"></i> Detailed Findings</h2>
+            <div id="findingsDetails">
+                <p class="empty-state">Select an alert to view detailed findings...</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>S3 Security Scanner &copy; 2024 | Built with Node.js & JavaScript</p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="overlay">
+        <div class="spinner"></div>
+        <p>Scanning S3 buckets...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
