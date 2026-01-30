@@ -44,7 +44,7 @@ Policy Risk Analysis - Identifies dangerous IAM policies
 Risk Scoring - Calculates severity scores (LOW → CRITICAL)
 
 ## 🏗️ Architecture
-
+```
 Misconfiguration_Analysis_System/
 ├── src/                           # Core scanner engine
 │   ├── scanner/s3Scanner.js       # Data collection from samples
@@ -61,7 +61,7 @@ Misconfiguration_Analysis_System/
 ├── server.js                      # Express web server
 ├── package.json                   # Dependencies
 └── README.md                      # This file
-
+```
 ## 🎯 Features
 ### Backend Scanner
 ✅ Modular Rule Engine - Easy to add new security rules
